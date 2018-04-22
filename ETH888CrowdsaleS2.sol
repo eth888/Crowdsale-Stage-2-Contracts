@@ -16,7 +16,7 @@ contract ETH888CrowdsaleS2 {
 	address public wallet;
 	
 	// how many token units a buyer gets per wei
-	uint256 public rate = 1000;
+	uint256 public rate = 400;
 	
 	// timestamps for ICO starts and ends
 	uint public startTimestamp;
@@ -26,12 +26,12 @@ contract ETH888CrowdsaleS2 {
 	uint256 public weiRaised;
 	
 	mapping(uint8 => uint64) public rates;
-	// week 2, 28 April 2018, 000:00:00 GMT
-	uint public timeTier1 = 1524873600;
-	// week 3, 5 May 2018, 000:00:00 GMT
-	uint public timeTier2 = 1525478400;
-	// week 4, 12 May 2018, 000:00:00 GMT
-	uint public timeTier3 = 1526083200;
+	// week 2, 5 May 2018, 000:00:00 GMT
+	uint public timeTier1 = 1525478400;
+	// week 3, 12 May 2018, 000:00:00 GMT
+	uint public timeTier2 = 1526083200;
+	// week 4, 19 May 2018, 000:00:00 GMT
+	uint public timeTier3 = 1526688000;
 
 	/**
 	   * event for token purchase logging
@@ -46,11 +46,11 @@ contract ETH888CrowdsaleS2 {
 		
 		require(_wallet != 0x0 && _vanilAddress != 0x0);
 		
-		// 21 April 2018, 00:00:00 GMT: 1524268800
-		startTimestamp = 1524268800;
+		// 28 April 2018, 00:00:00 GMT: 1524873600
+		startTimestamp = 1524873600;
 		
-		// 21 May 2018, 00:00:00 GMT: 1526860800
-		endTimestamp = 1526860800;
+		// 28 May 2018, 00:00:00 GMT: 1527465600
+		endTimestamp = 1527465600;
 		
 		rates[0] = 400;
 		rates[1] = 300;
